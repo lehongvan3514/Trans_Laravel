@@ -8,7 +8,6 @@ class product extends Model
 {
     //
     protected $guarded = [];
-    public $timestamps = false;
 
     public function drivers(){
 

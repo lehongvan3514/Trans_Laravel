@@ -28,7 +28,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //font-awesome-icons -->
 <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,900" rel="stylesheet">
 <script type="text/javascript" src="/assets/js/jquery-2.1.4.min.js"></script>
-
+{!! Charts::styles() !!}
 </head>
 	
 <body>

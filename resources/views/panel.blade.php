@@ -29,6 +29,11 @@
                                         <i class="glyphicon glyphicon-user"></i>
                                         Lên lịch cho nhân viên </a>
                                     </li>
+                                    <li >
+                                        <a href="/statistic">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                        Thống kê kinh doanh </a>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- END MENU -->

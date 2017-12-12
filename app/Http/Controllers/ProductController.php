@@ -18,6 +18,8 @@ use Auth;
 
 use DB;
 
+use Charts;
+
 use App\driver_status;
 class ProductController extends Controller
 {
@@ -177,6 +179,15 @@ class ProductController extends Controller
         $products = product::whereIn('trang_thai',[0,3])->get();
         
         return view('plan', compact('products'));
+    }
+
+    public function statistic(){
+        
+        $products = product::whereIn('trang_thai',[0,3])->get();
+
+        
+        
+        return view('statistic', compact('products'));
     }
 
     public function change_plan($id){

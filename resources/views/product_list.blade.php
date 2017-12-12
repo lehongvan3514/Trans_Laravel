@@ -45,7 +45,7 @@
                     </div>
                     <div class="col-md-9">
                         <div id="tongquan" class="profile-content" style="border: 1px solid #ddd; ">
-                           <fieldset>
+                           <fieldset id="field">
                                <legend class="text-semibold">
                                    Danh sách đơn hàng
                                </legend>
@@ -130,7 +130,9 @@
         },
         success: function(result){
             //delete all child
-            $("#tbody").empty();
+            $("#example").remove();
+            $("#field").html('<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">');
+            var table = $("#example").html('<thead><tr>><th>Tên</th> <th>Số điện thoại</th><th>Ngày giao hàng</th><th>Nơi xuất phát</th><th>Đích đến</th><th>Trạng thái</th></tr></thead><tfoot><tr><th>Tên</th><th>Số điện thoại</th><th>Ngày giao hàng</th><th>Nơi xuất phát</th><th>Đích đến</th><th>Trạng thái</th></tr></tfoot><tbody id="tbody"></tbody>');
             jQuery.each(result,function(i,val){
 
                 switch (val['trang_thai']){
@@ -160,12 +162,12 @@
                     $("#tbody").append($test);
                 });
             
-            
+            $("#example").DataTable();
 
     }});
     };
 
-    interval = setInterval(load_ajax, 600);
+    interval = setInterval(load_ajax, 5000);
 } );
 </script>
  <script>

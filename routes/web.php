@@ -23,6 +23,8 @@ Route::get('/ajax/driver_product', 'AjaxController@driver_product');
 
 Route::get('/ajax/location_update', 'AjaxController@location_update');
 
+Route::get('/ajax/statistic', 'AjaxController@statistic');
+
 Route::get('/login_android', 'ScriptController@login_android');
 
 Route::get('/update_location_android', 'ScriptController@update_location_android');
@@ -36,6 +38,8 @@ Route::get('/panel', 'AuthController@panel') ->middleware('checkrole:1');
 Route::get('/services', 'UserController@services');
 
 Route::get('/gproduct', 'ProductController@gproduct');
+
+Route::get('/statistic', 'ProductController@statistic');
 
 Route::get('/gallery', 'UserController@gallery');
 

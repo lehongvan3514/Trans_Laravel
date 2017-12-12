@@ -119,7 +119,9 @@
             //delete all child
 
             $("#tbody").empty();
-            switch (val['trang_thai']){
+            
+            jQuery.each(result,function(i,val){
+                switch (val['trang_thai']){
                     case 0:
                         $a = "Đang chờ xác nhận";
                         break;
@@ -142,7 +144,6 @@
                         $a = "Đơn hàng hoàn thành";
                         break;
                 }
-            jQuery.each(result,function(i,val){
                 $test = "<tr id='"+val['id'] +"'><td>"+val['name']+"</td><td>"+val['tel']+"</td><td>"+val['ngay_giao_hang']+"</td><td>"+val['xuat_phat_details']+"</td><td>"+val['dich_den_details']+"</td><td>"+val['weight']+"</td><td>"+$a+"</td><td><a href ='/change_plan/"+val['id']+"'> Chọn tài xế </a>  </td></tr>"
                     $("#tbody").append($test);
                 });

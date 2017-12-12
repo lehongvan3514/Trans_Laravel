@@ -40,4 +40,14 @@ class AjaxController extends Controller
         
         return $space;
     }
+
+    public function statistic(){
+        
+
+        $products = product::whereYear('ngay_giao_hang', '=', request('year'))
+              ->whereMonth('ngay_giao_hang', '=', request('month'))
+              ->get();
+        
+        return $products;
+    }
 }
