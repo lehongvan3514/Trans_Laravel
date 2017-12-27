@@ -65,13 +65,13 @@
                                         <label for="thoi_gian">Thời gian</label>
                                         <input type="date" style="width: 100%;" name="thoi_gian" required="">
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label for="xuat_phat1">Nơi xuất phát</label>
                                         <select name="xuat_phat1" class="form-control option-w3ls">
                                             <option>Vận chuyển từ</option>
                                             @include('layouts.diadiem')
                                         </select>
-                                    </div>
+                                    </div> -->
                                     <input type="text" hidden name="xuat_phat" id="xuat_phat">
                                     <div class="form-group">
                                         <label for="xuat_phat_details">Địa chỉ cụ thể</label>
@@ -90,13 +90,13 @@
                                         });
                                         </script>
                                     </div>
-                                    <div class="form-group">
+                                   <!--  <div class="form-group">
                                         <label for="dich_den1">Đích đến</label>
                                         <select name="dich_den1" class="form-control option-w3ls">
                                             <option>Vận chuyển tới</option>
                                             @include('layouts.diadiem')
                                         </select>
-                                    </div>
+                                    </div> -->
                                     <input type="text" hidden name="dich_den" id="dich_den">
                                     <div class="form-group">
                                         <label for="dich_den_details">Địa chỉ cụ thể</label>

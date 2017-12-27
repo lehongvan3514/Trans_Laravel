@@ -4,33 +4,38 @@
     <div class="container">
         <div class="container">
             <div class="row profile">
-                <div class="col-md-3 ">
-                    <div class="profile-sidebar" style="border: 1px solid #ddd; ">
-                        @include ('layouts.side-bar-panel')
-                        <!-- SIDEBAR MENU -->
-                        <div class="profile-usermenu">
-                            <ul class="nav">
-                                <li>
-                                    <a href="/panel">
+                 <div class="col-md-3 " >
+                        <div class="profile-sidebar" style="border: 1px solid #ddd; ">
+                           @include ('layouts.side-bar-panel')
+                           <!-- SIDEBAR MENU -->
+                            <div class="profile-usermenu">
+                                <ul class="nav">
+                                    <li  >
+                                        <a href="/panel">
                                         <i class="glyphicon glyphicon-home"></i>
                                         Tổng quan </a>
-                                </li>
-                                <li>
-                                    <a href="/acc_role">
+                                    </li>
+                                    <li >
+                                        <a href="/acc_role">
                                         <i class="glyphicon glyphicon-user"></i>
                                         Nâng cấp tài khoản </a>
-                                </li>
-                                <li>
-                                    <a href="/plan" class="active">
+                                    </li>
+                                    <li class="active" >
+                                        <a href="/plan">
                                         <i class="glyphicon glyphicon-user"></i>
                                         Lên lịch cho nhân viên </a>
-                                </li>
-                            </ul>
+                                    </li>
+                                    <li >
+                                        <a href="/statistic">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                        Thống kê kinh doanh </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- END MENU -->
+                            <!-- END MENU -->
                         </div>
-                        <!-- END MENU -->
-                        <!-- END MENU -->
                     </div>
-                </div>
                 <div class="col-md-9">
                     <div id="tongquan" class="profile-content" style="border: 1px solid #ddd; ">
                         <fieldset>

@@ -10,6 +10,8 @@ use Auth;
 
 use Hash;
 
+Use Excel;
+
 use Validator;
 
 class UserController extends Controller

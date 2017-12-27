@@ -68,15 +68,9 @@
                                         <label for="thoi_gian">Thời gian</label>
                                         <input type="date" style="width: 100%;" name="thoi_gian" required="">
                                     </div>
+                                    <input type="text" hidden name="xuat_phat" id="xuat_phat">
                                     <div class="form-group">
-                                        <label for="xuat_phat">Nơi xuất phát</label>
-                                        <select name="xuat_phat" class="form-control option-w3ls">
-                                            <option>Vận chuyển từ</option>
-                                            @include('layouts.diadiem')
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="xuat_phat_details">Địa chỉ cụ thể</label>
+                                        <label for="xuat_phat_details">Xuất phát</label>
                                         <input type="text" class="form-control" name="xuat_phat_details" id="xuat_phat_details" required="">
                                         <script>
                                         var a = true;
@@ -92,16 +86,9 @@
                                         });
                                         </script>
                                     </div>
+                                    <input type="text" hidden name="dich_den" id="dich_den">
                                     <div class="form-group">
-                                        <label for="dich_den">Đích đến</label>
-                                        <select name="dich_den1" class="form-control option-w3ls">
-                                            <option>Vận chuyển tới</option>
-                                            @include('layouts.diadiem')
-                                        </select>
-                                    </div>
-                                    <input type="text" hidden name="dich_den">
-                                    <div class="form-group">
-                                        <label for="dich_den_details">Địa chỉ cụ thể</label>
+                                        <label for="dich_den_details">Nơi đến</label>
                                         <input type="text" class="form-control" name="dich_den_details" id="dich_den_details" required="">
                                         @include('layouts.map')
                                         <script>
@@ -119,10 +106,13 @@
 
                                             if (a){
                                               $('#xuat_phat_details').val(address);
+                                              $('#xuat_phat').val(latlng);
+
                                               $('#close').click();
                                             }
                                             else{
                                             $('#dich_den_details').val(address);
+                                            $('#dich_den').val(latlng);
                                             $('#close').click();
                                           }
                                         });
@@ -135,7 +125,7 @@
                                     @if (Session::has('guest_thanhcong'))
                                     <div class="alert alert-success">{!! Session::get('guest_thanhcong') !!}</div>
                                     @endif @include('layouts.errors')
-                                    <button class="submit-b" type="submit">Đặt hàng</button>
+                                    <button class="btn btn-primary" type="submit">Đặt hàng</button>
                                 </form>
                             </div>
                         </fieldset>

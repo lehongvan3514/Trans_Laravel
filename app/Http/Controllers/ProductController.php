@@ -182,12 +182,32 @@ class ProductController extends Controller
     }
 
     public function statistic(){
-        
+        for ($i=1;$i<=12;$i++){
+            $temps = product::whereYear('ngay_giao_hang', '=', 2017)
+              ->whereMonth('ngay_giao_hang', '=', $i)
+              ->get();
+              $a=0;
+            foreach ($temps as $temp) {
+                # code...
+                $weight = (int)$temp->weight;
+                $a=$a+$weight*2;
+            }
+            $product[]=$a; 
+            $product_name[]="Tháng ".(string)$i;
+        }
+        $chart=Charts::create('area', 'highcharts')
+        ->title('Thống kê doanh thu năm 2017 theo 1000 VND')
+        ->elementLabel('Doanh thu tháng ')
+        ->labels($product_name)
+        ->values($product)
+        ->dimensions(10,5)
+        ->responsive(true);
+
         $products = product::whereIn('trang_thai',[0,3])->get();
 
         
         
-        return view('statistic', compact('products'));
+        return view('statistic', compact('products','chart'));
     }
 
     public function change_plan($id){

@@ -19,6 +19,8 @@ Route::get('/ajax/product_list', 'AjaxController@product_list');
 
 Route::get('/ajax/plan', 'AjaxController@plan');
 
+Route::get('/ajax/excel', 'AjaxController@excel');
+
 Route::get('/ajax/driver_product', 'AjaxController@driver_product');
 
 Route::get('/ajax/location_update', 'AjaxController@location_update');

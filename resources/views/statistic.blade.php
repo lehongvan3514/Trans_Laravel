@@ -74,12 +74,26 @@ echo $mytime->month; ?> - <?php echo $mytime->year ?>
                                                    <span id="not_money"> {{Auth::user()->name}}</span>
                                                </div>
                                            </div>
+                                           <div class="form-group col-lg-8" style="display: block;">
+                                               <a href="#" id="btn_thongke" class="van-button-link">Hiện/Ẩn thống kê năm 2017</a>
+                                               <a href="/ajax/excel?month=11&year=2017" id="btn_excel" class="van-button-link">Xuất file excel</a>
+                                           </div>
                                        </div>
                                        
                                    </form>
                                </div>
                               
                            </fieldset>
+                           <div class="app" style="display: block;">
+					            <center>
+					                {!! $chart->html() !!}
+					            </center>
+					        </div>
+					        <!-- End Of Main Application -->
+
+					        {!! Charts::scripts() !!}
+       						{!! $chart->script() !!}
+       						
                         <fieldset id="field">
                             <legend class="text-semibold">
                                 Thống kê kinh doanh tháng 
@@ -138,6 +152,7 @@ echo $mytime->month; ?> - <?php echo $mytime->year ?>
         </div>
     </div>
 </div>
+
 <!-- //services -->
 <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
 <script src="assets/js/jquery.waypoints.min.js"></script>
@@ -150,8 +165,36 @@ echo $mytime->month; ?> - <?php echo $mytime->year ?>
 <script src="assets/js/bootstrap.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
 <script>
   $(document).ready(function() {
+  	$('.app').css('display', 'none');
+  	$("#btn_thongke").click(function(){
+  		if($('.app').css('display') == 'none')
+		{
+			$('.app').css('display', 'block');
+  			eval($(".charts-chart").children().attr("id")).reflow();
+		}
+  		else{
+  			$('.app').css('display', 'none');
+  		}
+  		
+  	});
+    /*$("#btn_thongke").click(function(){
+        $.ajax({
+        url: "/ajax/excel", 
+        type:"GET",
+        data:{
+            month:11,
+            year:{{$mytime->year}}
+        },
+        dataType:'json',
+        success: function(result){
+            //delete all child;
+            }});
+
+        
+    });*/
   	const numberWithCommas = (x) => {
 	  var parts = x.toString().split(".");
 	  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -225,7 +268,7 @@ echo $mytime->month; ?> - <?php echo $mytime->year ?>
         url: "/ajax/statistic", 
         type:"GET",
         data:{
-        	month:{{$mytime->month}},
+        	month:11,
         	year:{{$mytime->year}}
         },
         dataType:'json',

@@ -8,7 +8,7 @@
         <div class="container">
             <div class="container">
                 <div class="row profile">
-                    <div class="col-md-3 " >
+                     <div class="col-md-3 " >
                         <div class="profile-sidebar" style="border: 1px solid #ddd; ">
                            @include ('layouts.side-bar-panel')
                            <!-- SIDEBAR MENU -->
@@ -19,7 +19,7 @@
                                         <i class="glyphicon glyphicon-home"></i>
                                         Tổng quan </a>
                                     </li>
-                                    <li class="active">
+                                    <li class="active" >
                                         <a href="/acc_role">
                                         <i class="glyphicon glyphicon-user"></i>
                                         Nâng cấp tài khoản </a>
@@ -29,9 +29,14 @@
                                         <i class="glyphicon glyphicon-user"></i>
                                         Lên lịch cho nhân viên </a>
                                     </li>
-                                    
+                                    <li >
+                                        <a href="/statistic">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                        Thống kê kinh doanh </a>
+                                    </li>
                                 </ul>
                             </div>
+                            <!-- END MENU -->
                             <!-- END MENU -->
                         </div>
                     </div>

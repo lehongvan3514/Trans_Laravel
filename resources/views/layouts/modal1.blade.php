@@ -14,7 +14,7 @@
 							 {{ csrf_field() }}
 								<input type="email" name="email" placeholder="E-mail" required="">
 								<input type="password" name="password" placeholder="Password" required="">
-								<button class="submit-b" type="submit">Sign in</button>
+								<button class="btn btn-primary" type="submit">Sign in</button>
 							</form>
 							@include('layouts.errors')
 							
@@ -50,7 +50,7 @@
 								<input type="email" name="email" placeholder="Email" required="">
 								<input type="password" name="password" placeholder="Password" required="">
 								<input type="password" name="password_confirmation" placeholder="Confirm Password" required="">
-								<button class="submit-b" type="submit">Sign up</button>
+								<button class="btn btn-primary" type="submit">Sign up</button>
 							</form>
 							@include('layouts.errors')
 						</div>

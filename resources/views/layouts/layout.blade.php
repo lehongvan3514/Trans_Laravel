@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-				<h1><a class="navbar-brand" href="/"><i class="fa fa-plane" aria-hidden="true"></i> Move Cargo <span>For Global Services</span></a></h1>
+				<h1><a class="navbar-brand" href="/"><i class="fa fa-plane" aria-hidden="true"></i> Công ty vận chuyển <span>Global Services</span></a></h1>
 
 				</div>
 				
@@ -73,13 +73,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="active"><a href="/" class="effect-3">Home</a></li>
 							<li><a href="services" class="effect-3">Services</a></li>
 							<li><a href="gallery" class="effect-3">Gallery</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">Short Codes <b class="fa fa-caret-down" aria-hidden="true"></b></a>
-								<ul class="dropdown-menu agile_short_dropdown">
-									<li><a href="icons.html">Web Icons</a></li>
-									<li><a href="typography.html">Typography</a></li>
-								</ul>
-							</li>
 							<li><a href="mail" class="effect-3">Mail Us</a></li>
 							
 						</ul>
